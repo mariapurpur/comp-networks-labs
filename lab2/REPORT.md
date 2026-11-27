@@ -180,7 +180,7 @@ scrape_configs:
 ![Тестирование запросов к Loki 3](images/test_loki_3.png)
 
 
-Вывод всех логов уровня > 2 (Warnings и Errors)
+Вывод всех логов уровня >= 2 (Warnings и Errors)
 ![Тестирование запросов к Loki 4](images/test_loki_4.png)
 
 #### 2. Создание дашборда с таблицей логов из Loki
