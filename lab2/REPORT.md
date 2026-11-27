@@ -7,7 +7,7 @@
 ### Часть 1. Настройка логирования (Nextcloud + Promtail + Loki)
 #### 1. Подготовка конфигурационных файлов 
 
-`docker-compose.yml`
+`docker-compose.yml`:
 
 ```yaml
 services:
@@ -93,7 +93,7 @@ volumes:
   zabbix-db:
 ```
 
-`promtail_config.yml`
+`promtail_config.yml`:
 
 ```yaml
 server:
@@ -124,19 +124,19 @@ scrape_configs:
 
 Откроем http://localhost:8080 и инициализируем Nextcloud
 
-![Страница инициализации Nextcloud в браузере](02_nextcloud_initialisation.png)
+![Страница инициализации Nextcloud в браузере](images/02_nextcloud_initialisation.png)
 
-![Инициализация Nextcloud прошла успешно](03_nextcloud_initialised.png)
+![Инициализация Nextcloud прошла успешно](images/03_nextcloud_initialised.png)
 
 Проверим, что логи сохраняются в файл `nextcloud.log`
 
-![Содержимое файла nextcloud.log](04_nextcloud_logs.png)
+![Содержимое файла nextcloud.log](images/04_nextcloud_logs.png)
 
 #### 4. Проверка захвата лог-файла агентом Promtail
 
 Смотрим логи контейнера promtail
 
-![Promtail подцепил нужный файл](05_promtail_logs.png)
+![Promtail подцепил нужный файл](images/05_promtail_logs.png)
 
 ### Часть 2. Настройка мониторинга (Zabbix)
 1. Импорт шаблона мониторинга (`template.yml`)
